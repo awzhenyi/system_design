@@ -1,0 +1,4 @@
+# Sql
+ACID
+# NoSql
+BASE
