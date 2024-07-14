@@ -1,4 +1,6 @@
-# Sql
+# Sql vs No Sql
+## Sql
 ACID
-# NoSql
+
+## NoSql
 BASE
