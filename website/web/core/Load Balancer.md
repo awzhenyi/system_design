@@ -1,4 +1,4 @@
-Load Balancer
+# Load Balancer
 
 * Web apps are deployed on machines and hosted on servers. These hardware machines have finite resources such as memory, network connection and processing power.
 * Increase in traffic can prevent applications from serving requests once it hits its capacity.
@@ -23,4 +23,6 @@ Load Balancing algorithms
 1. Round Robin
 2. Least Connection
 3. Consistent Hashing
+
+- common load balancer includes nginx.
 
