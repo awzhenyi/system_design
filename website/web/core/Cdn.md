@@ -6,4 +6,5 @@
 - If the content is not cached on that server, the CDN will fetch the content from the origin server, cache it on the server, and then return the content to the user.
 - most common application of a CDN in an interview is to cache static media assets like images and videos. For example, if you have a social media platform like Instagram, you might use a CDN to cache user profile pictures. This would allow you to serve profile pictures quickly to users all over the world.
 - can also be used to cache dynamic content that are rather infrequently changed.
+- can also be used to cache api responses.
 
