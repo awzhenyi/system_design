@@ -25,3 +25,6 @@ Common Usage
 
 - sorted set, heap
 - geospatial data
+
+
+- Distributed lock

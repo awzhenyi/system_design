@@ -10,11 +10,13 @@
 * Identify core entities of the system.  These are the core entities that your API will exchange and that your system will persist in a Data Model. In the actual interview, this is as simple as jotting down a bulleted list and explaining this is your first draft to the interviewer.
 * Design api / system interface. REST, Graphql or Wire protocol. GRPC?.
 
-## Propose high level design and get buy in 
+## Propose high level design and get buy in
+* Defining certain core entities 
 * primary goal is to design an architecture that satisfies the API you've designed and, thus, the requirements you've identified. In most cases, you can even go one-by-one through your API endpoints and build up your design sequentially to satisfy each one.
-* 
+* Design each Api as per the functiona requirement, and then form the diagram + the database model
+
 ## Design deep dive
-* A
+* 
 ## Wrap up / Summary
 
 ## Extras
@@ -24,7 +26,7 @@
 2. Non Functional Requirements
     - Do you want a consistent, or highly available system? This could influence design choices
     - Need to know the typical examples of strongly consistent systems, and highly available systems
-    - What scale? How many DAU?
+    - What scale? How many DAU? Do estimation here?
     - Any latency requirements? Define a specific latency range rather than "low latency".
     - Durability: how important is it that data in system is not lost? social media vs banking systems
     - Security: How secure should data be? data protection? access controls? regulatory requirements?
