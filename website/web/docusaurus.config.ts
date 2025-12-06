@@ -13,6 +13,11 @@ const config: Config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'facebook', // Usually your GitHub org/user name.
@@ -80,6 +85,15 @@ const config: Config = {
         routeBasePath: 'corecs',
         sidebarPath: require.resolve('./sidebars.ts'),
       }, 
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'LowLevelDesign',
+        path: 'lowleveldesign',
+        routeBasePath: 'lowleveldesign',
+        sidebarPath: require.resolve('./sidebars.ts'),
+      }, 
     ]
   ],
   themeConfig: {
@@ -114,6 +128,12 @@ const config: Config = {
           type: 'docSidebar',
           label: 'Core (CS)',
           href: '/corecs/intro',
+          sidebarId: 'tutorialSidebar',
+        },
+        {
+          type: 'docSidebar',
+          label: 'Low Level Design',
+          href: '/lowleveldesign/intro',
           sidebarId: 'tutorialSidebar',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
