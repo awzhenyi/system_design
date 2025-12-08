@@ -57,4 +57,23 @@
     * **Push Model** - receives messages as they arrive.
     * **Pull Model** - poll kafka for new messages at regular intervals.
 
+# Common Questions
+**Q** Explain general architecture of kafka?  
+**A**: 1 kafka cluster -> multiple brokers. 1 brokers -> multiple partitions. 1 topic -> can be divided into multiple partitions. 1 partition is tied to 1 topic. producer publishes to topic. each message has hash to select which partition to publish to.
 
+**Q**: Why is kafka fast / has high throughput?  
+**A**: "zero copy" by not having to copy to intermediate buffer. Fast writes due to append only log 
+
+**Q**: How does kafka achieve fault tolerance / no loss of messages?  
+**A**: Leader follower replication. message can be replicated across different partitions across different brokers. Acks setting. 0 acks (fire and forget), 1 ack (leader ack), acks = all (leader and followers ack). Disk write before acknowledgement of message. messages are not lost once they are written to disk. Consumers store last read message (offsets) in kafka itself. If a consumer fails, it can resume from last saved offset.
+
+**Q**: Why is kafka high scalibility?  
+**A**: Horizontal scaling by increasing partitions. Individual scaling of producer and consumer possible due to decoupling.
+
+**Q** Cons of increasing partitions?
+**A** may increase end to end latency due to having data needing to be replicated on more partitions. may require more memory.
+
+**Q** Delivery semantics of kafka?
+**A** Kafka gaurantees at least once delivery. Each message will be sent at least once to each consumer group. Different consumers within the consumer group will not process the same message more than once. use of idempotent producers
+
+**Q** Ordering gaurantee of kafka?

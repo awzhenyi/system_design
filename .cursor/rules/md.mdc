@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+When generating information on topics for markdown files, always keep it well structured. This includes appropriate headers, titles, concise bullet points and sub bullet points.
