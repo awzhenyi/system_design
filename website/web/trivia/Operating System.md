@@ -30,7 +30,7 @@ Process Control Block (PCB) is a data structure used by the operating system to 
 3. What is virtual memory and why is it important?
 Virtual memory is a memory management technique used by operating systems to give the appearance of a large, continuous block of memory to applications, even if the physical memory (RAM) is limited. It allows the system to compensate for physical memory shortages, enabling larger applications to run on systems with less RAM.
 
-Memory referenecs (virtual addresses) used in each process maps to some phyiscal memory address at runtime. Process can be swapped in and out of main memory during execution. Process can be broken down into multiple pieces and each occupies a non contiguous part of the physical memory. 2 main types of virtual memory are paging and segmentation.
+Memory references (virtual addresses) used in each process maps to some phyiscal memory address at runtime. Process can be swapped in and out of main memory during execution. Process can be broken down into multiple pieces and each occupies a non contiguous part of the physical memory. 2 main types of virtual memory are paging and segmentation.
 - **Paging** -> divides memory into fixed size blocks called pages. pages that are not currently in use will be swapped to disk. When a page that is not in ram is needed, CPU generates an interrupt indicating memory access fault, and the OS will bring the page back into RAM.
 - **Segmentation** -> divides virtual memory into segments of different sizes. segments that are not needed can be moved into disk. segments are only mapped into a process address space when needed.
 <br />

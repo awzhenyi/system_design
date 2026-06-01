@@ -62,27 +62,18 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'Examples',
-        path: 'examples',
-        routeBasePath: 'examples',
+        id: 'HighLevelDesign',
+        path: 'highleveldesign',
+        routeBasePath: 'highleveldesign',
         sidebarPath: require.resolve('./sidebars.ts'),
       }, 
     ],
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'Core',
-        path: 'core',
-        routeBasePath: 'core',
-        sidebarPath: require.resolve('./sidebars.ts'),
-      }, 
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'Core_CS',
-        path: 'corecs',
-        routeBasePath: 'corecs',
+        id: 'Trivia',
+        path: 'trivia',
+        routeBasePath: 'trivia',
         sidebarPath: require.resolve('./sidebars.ts'),
       }, 
     ],
@@ -114,20 +105,14 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          label: 'Examples',
-          href: '/examples/intro',
+          label: 'High Level Design',
+          href: '/highleveldesign/intro',
           sidebarId: 'tutorialSidebar',
         },
         {
           type: 'docSidebar',
-          label: 'Core (SD)',
-          href: '/core/intro',
-          sidebarId: 'tutorialSidebar',
-        },
-        {
-          type: 'docSidebar',
-          label: 'Core (CS)',
-          href: '/corecs/intro',
+          label: 'Trivia',
+          href: '/trivia/intro',
           sidebarId: 'tutorialSidebar',
         },
         {
@@ -192,6 +177,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['java'], // Add this line
     },
   } satisfies Preset.ThemeConfig,
 };
